@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" type="text/css" href="Oracle.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+    
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+    
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+      color: orange;
+    }
+    
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+      }
+    }
+    </style>
+</head>
+<body>
+<div class="navbar">
+  <img src="Images/Image1.png" width="42" height="42">  
+  <a href="#" onclick="openPrice()">Pricing</a>
+  <a href="#" onclick="openGallery()">Gallery</a>
+  <a href="#" onclick="openContact()">Contact</a>
+  <a href="#" class="right" onclick="openRegister()">Check Horoscope</a>
+</div>
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="#" onclick="openPrice()">See Prices</a>
+      <a href="#" onclick="openRegister()">Check Horoscope</a>
+      <a href="#" onclick="openMarriage()">Marriage Matching</a>
+      <a href="#">Remedies</a>
+      <a href="#" onclick="openContact()">Contact</a>
+    </div>
+  </div>
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+  
+  <script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  function openRegister(){
+      window.open("Register.html");
+  }
+  function openMarriage(){
+      window.open("Marriage.html");
+}
+function openContact(){
+      window.open("Contact.html");
+}
+function openFront(){
+  window.open("Front.html")
+}
+function openGallery(){
+  window.open("Gallery.html");
+}
+function openPrice(){
+  window.open("Pricing.html");
+}
+  </script>
+ <div class="row">
+  <div class="side">
+    <h2>Predictions</h2>
+    <h5>Get Your Future Predicted</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <h3>Use Our Tools To : </h3>
+    <p>Get Your Future Predicted</p>
+    <p>Check Your Horoscope</p>
+    <p>Let Us Help You Find Your Perfect Life Partner</p>
+    <p>Find Remedies</p>
+  </div>
+  <div class="main">
+    <h1>Got Your Horoscope Checked ?</h1>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Your horoscope is the mirror to your life’s past, present and future. It helps decipher challenges, unlock opportunities and unravel mysteries that is blocking your way to success and peace. These horoscopes ensure honest all-round guidance on a daily, weekly, monthly and yearly basis. Know your Horoscope to be aware of the cosmic alignments in store for you..</p>
+    
+    <br>
+    <h1>Marriage Matching </h1>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p> Marriage Is The Beautiful Connection Between 2 Amazing Souls. But Finding That One Perfect Match is Really Tough. So Let Us Do That For You. Send Us Your Profile and We'll Search Through Multiple Other Profiles and Find That One Perfect Partner That You Cherishly Desire !</p>
+    
+  </div>
+</div>
+
+<div class="footer">
+  <h5><footer>&copy; Copyright 2019  </footer>
+  </h5>
+  <h5 ><footer> <a href="TC.html" onclick="openTC()"> Terms & Conditions</a> </footer>
+  </h5>
+</div>
+<script>
+function openTC(){
+window.open("TC.html");
+}
+</script>
+</body>
+</html>
+
