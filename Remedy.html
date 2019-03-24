@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="Remedy.css" rel="stylesheet">
+</head>
+<body>
+
+<form action="/action_page.php">
+  <div class="container">
+    <h1>Find Remedies</h1>
+    <p>Please fill in this form to find Remedies</p>
+    <hr>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Full Name" name="name" required>
+    <hr>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">  <hr>
+    <label for="phone"><b>Phone</b></label>
+    <input type="text" placeholder="Phone " name="phone" required pattern="[6789][0-9]{10}">  <hr>
+    <label for="Place of Birth"><b>City</b></label>
+    <input type="text" placeholder="Place Of Birth" name="City" required>
+    <hr>
+    <label for="datetime"><b>Date Of Birth</b></label>
+    <label for="date"><b>Day</b></label>
+    <input type="number" placeholder="Day" name="Day" required min="1" max="31">
+    <label for="Month"><b>Month</b></label>
+    <select name="Month">
+            <option value="Jan">Jan</option>
+            <option value="Feb">Feb</option>
+            <option value="Mar">Mar</option>
+            <option value="Apr">Apr</option>
+            <option value="May">May</option>
+            <option value="Jun">Jun</option>
+            <option value="Jul">Jul</option>
+            <option value="Aug">Aug</option>
+            <option value="Sep">Sep</option>
+            <option value="Oct">Oct</option>
+            <option value="Nov">Nov</option>
+            <option value="Dec">Dec</option>
+            
+          </select>
+    <label for="date"><b>Year</b></label>
+    <input type="number" placeholder="Year" name="Year" required min="1900" max="2019">
+    <label for="Time"><b>Time</b></label>
+    <input type="number" placeholder="Hr" name="Time" required min="1" max="12">:
+    <input type="number" placeholder="Min" name="Time" required min="00" max="59">
+    <select name="meridiem">
+           
+            <option value="A.M">A.M</option>
+            <option value="P.M">P.M</option>
+            
+          </select>
+      <hr>  
+      <label for="Gender"><b>Gender</b></label><br>
+      <hr>
+      <input type="radio" name="gender" value="male"> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>  
+      <input type="radio" name="gender" value="other"> Other<br><br>
+      <label for="Query"><b>Got a Query ?</b></label><br><hr>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." rows="20" cols="100"></textarea>
+      </div>
+      <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button type="submit" class="registerbtn" onclick="openReply()">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="#" onclick="openFront()">Sign in</a>.</p>
+  </div>
+</form>
+<script>
+function openFront(){
+    window.open("Front.html");
+}
+function openReply(){
+window.open("Reply.html");
+}
+</script>
+</body>
+</html>
+
