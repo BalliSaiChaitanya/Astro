@@ -18,8 +18,11 @@
     <input type="text" placeholder="Enter Email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">  <hr>
     <label for="Place of Birth"><b>City</b></label>
     <input type="text" placeholder="Place Of Birth" name="City" required>
-    <hr>
-    <label for="datetime"><b>Date Of Birth</b></label><hr>
+    <label for="phone"><b>Phone</b></label>
+    <input type="number" placeholder="Phone " name="phone" required pattern="[6789][0-9]{10}">  <hr>
+    <label for="datetime"><b>Date Of Birth</b></label>
+    <label for="date"><b>Day</b></label>
+    <input type="number" placeholder="Day" name="Day" required min="1" max="31">
     <label for="Month"><b>Month</b></label>
     <select name="Month">
             <option value="Jan">Jan</option>
@@ -36,8 +39,7 @@
             <option value="Dec">Dec</option>
             
           </select>
-          <label for="date"><b>Day</b></label>
-    <input type="number" placeholder="Day" name="Day" required min="1" max="31">
+          
     <label for="date"><b>Year</b></label>
     <input type="number" placeholder="Year" name="Year" required min="1900" max="2019">
     <label for="Time"><b>Time</b></label>
