@@ -1,0 +1,6 @@
+<web-app>
+	<servlet>
+		<servlet-name>reg</servlet-name>
+		<jsp-file>/reg.jsp</jsp-file>
+	</servlet>
+</web-app>
