@@ -10,14 +10,13 @@
     
     <h1>Login</h1>
 
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    <label for="email"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" id="Un" name="Uname" required >
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+    <input type="password" placeholder="Enter Password" id="pw" name="psw" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
 
-    <button type="submit" class="btn">Login</button> <br>
-    <button type="submit" class="btn" onclick="openRegister()">Sign Up </button>
+    <button type="submit" class="btn" onclick="Login()">Login</button> <br>
     <button type="submit" class="btn" onclick= "openHome()">Go To WebPage</button>
   </form>
 </div>
@@ -28,6 +27,13 @@ window.open("Oracle.html");
 function openRegister(){
       window.open("Register.html");
   }
+function Login(){
+let Username=document.getElementById("Un");  
+let Password=document.getElementById("pw");
+if ((Password=== "Maruthi123$") && (Login===Maruthirenukunta)){
+  window.open("Retrive.jsp");
+}
+}
 </script>
 </body>
 </html>
